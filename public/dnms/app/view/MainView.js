@@ -18,11 +18,53 @@ Ext.define('dnms.view.MainView', {
     alias: 'widget.dnms',
 
     requires: [
-        'dnms.view.MainViewViewModel'
+        'dnms.view.MainViewViewModel',
+        'Ext.panel.Panel'
     ],
 
     viewModel: {
         type: 'mainview'
-    }
+    },
+    layout: 'border',
+
+    items: [
+        {
+            xtype: 'container',
+            region: 'center',
+            layout: {
+                type: 'hbox',
+                align: 'stretch'
+            },
+            items: [
+                {
+                    xtype: 'panel',
+                    flex: 0.2,
+                    maxWidth: 200,
+                    layout: 'accordion',
+                    animCollapse: true,
+                    collapseDirection: 'left',
+                    title: 'Operations',
+                    titleCollapse: false,
+                    items: [
+                        {
+                            xtype: 'panel',
+                            layout: 'accordion',
+                            title: 'Objects'
+                        },
+                        {
+                            xtype: 'panel',
+                            layout: 'accordion',
+                            title: 'Global Config'
+                        }
+                    ]
+                },
+                {
+                    xtype: 'panel',
+                    flex: 1,
+                    title: 'MAP'
+                }
+            ]
+        }
+    ]
 
 });
