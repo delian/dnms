@@ -9,7 +9,7 @@
         "designer|initialView": true,
         "designer|userAlias": "dnms",
         "designer|userClassName": "MainView",
-        "layout": "border"
+        "layout": "fit"
     },
     "name": "MyViewport",
     "designerId": "faebba6c-f2b0-4682-8f75-7be80bac0784",
@@ -24,9 +24,7 @@
             },
             "codeClass": null,
             "userConfig": {
-                "container|align": "stretch",
-                "layout": "hbox",
-                "layout|region": "center"
+                "layout": "border"
             },
             "name": "MyContainer",
             "designerId": "5316452f-a379-4058-b8be-a79f40f3d334",
@@ -41,13 +39,17 @@
                     "userConfig": {
                         "animCollapse": true,
                         "collapseDirection": "left",
-                        "collapsible": null,
+                        "collapsible": true,
                         "designer|uiInterfaceName": "default",
                         "layout": "accordion",
-                        "layout|flex": 0.2,
-                        "maxWidth": 200,
+                        "layout|flex": null,
+                        "layout|region": "west",
+                        "layout|split": true,
+                        "maxWidth": 400,
+                        "minWidth": 150,
                         "title": "Operations",
-                        "titleCollapse": false
+                        "titleCollapse": null,
+                        "width": null
                     },
                     "name": "MyPanel",
                     "designerId": "4458c606-3322-4ba6-8460-453e37c1347b",
@@ -64,7 +66,49 @@
                                 "title": "Objects"
                             },
                             "name": "MyPanel2",
-                            "designerId": "eb6bd986-6fbc-4997-81ae-24c2d5576f39"
+                            "designerId": "eb6bd986-6fbc-4997-81ae-24c2d5576f39",
+                            "cn": [
+                                {
+                                    "type": "Ext.form.field.ComboBox",
+                                    "reference": {
+                                        "name": "dockedItems",
+                                        "type": "array"
+                                    },
+                                    "codeClass": null,
+                                    "userConfig": {
+                                        "dock": "top",
+                                        "editable": false,
+                                        "emptyText": "Select",
+                                        "fieldLabel": "Add",
+                                        "labelAlign": "right",
+                                        "labelWidth": 50,
+                                        "store": "objectTypes",
+                                        "valueField": "id"
+                                    },
+                                    "name": "MyComboBox",
+                                    "designerId": "118b6a70-25a6-4240-ba18-e3363624ff8a",
+                                    "cn": [
+                                        {
+                                            "type": "basiceventbinding",
+                                            "reference": {
+                                                "name": "listeners",
+                                                "type": "array"
+                                            },
+                                            "codeClass": null,
+                                            "userConfig": {
+                                                "fn": "onComboboxChange",
+                                                "implHandler": [
+                                                    "field.setValue(''); // Clear the combobox"
+                                                ],
+                                                "name": "change",
+                                                "scope": "me"
+                                            },
+                                            "name": "onComboboxChange",
+                                            "designerId": "4bacca1a-c591-48d9-b5b4-bcf3806d4dfd"
+                                        }
+                                    ]
+                                }
+                            ]
                         },
                         {
                             "type": "Ext.panel.Panel",
@@ -90,12 +134,44 @@
                     },
                     "codeClass": null,
                     "userConfig": {
-                        "layout": null,
-                        "layout|flex": 1,
-                        "title": "MAP"
+                        "designer|displayName": "Center Panel",
+                        "layout": "accordion",
+                        "layout|flex": null,
+                        "layout|region": "center",
+                        "layout|split": null,
+                        "title": null,
+                        "titleCollapse": null
                     },
                     "name": "MyPanel1",
-                    "designerId": "22604ca3-c25b-4c46-9455-57396a2f6fac"
+                    "designerId": "22604ca3-c25b-4c46-9455-57396a2f6fac",
+                    "cn": [
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Network Map"
+                            },
+                            "name": "MyPanel6",
+                            "designerId": "f7a6075d-6d16-43de-8780-b02eb7bec6d9"
+                        },
+                        {
+                            "type": "Ext.panel.Panel",
+                            "reference": {
+                                "name": "items",
+                                "type": "array"
+                            },
+                            "codeClass": null,
+                            "userConfig": {
+                                "title": "Others"
+                            },
+                            "name": "MyPanel7",
+                            "designerId": "6f4e7101-f341-4b29-a233-6903a93081fa"
+                        }
+                    ]
                 }
             ]
         }

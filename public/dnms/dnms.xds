@@ -38,7 +38,9 @@
             "8a7677c3-ddc1-411f-b863-391df977c2f9",
             "5a0bc300-1ebe-4e99-80a5-7daf2cad998f"
         ],
-        "store": [],
+        "store": [
+            "92cf3484-c3df-40f8-8938-a5d4f6911905"
+        ],
         "controller": [],
         "model": [],
         "resource": [

@@ -1,0 +1,63 @@
+{
+    "type": "Ext.data.Store",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|userClassName": "objectTypes",
+        "storeId": "objectTypes"
+    },
+    "name": "MyStore",
+    "designerId": "92cf3484-c3df-40f8-8938-a5d4f6911905",
+    "cn": [
+        {
+            "type": "Ext.data.proxy.Memory",
+            "reference": {
+                "name": "proxy",
+                "type": "object"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "data": [
+                    "[",
+                    "  { id: 'snmp', text: 'SNMP Device' },",
+                    "  { id: 'link', text: 'Link' },",
+                    "  { id: 'rectangle', text: 'Rectangle' },",
+                    "  { id: 'oval', text: 'Oval' },",
+                    "  { id: 'text', text: 'Text' }",
+                    "]"
+                ]
+            },
+            "name": "MyMemoryProxy",
+            "designerId": "b5184e7f-9185-431a-a1ed-bbcbed9628bc"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "id"
+            },
+            "name": "MyField",
+            "designerId": "f748bca5-e0e1-4172-9157-5e6b52143251"
+        },
+        {
+            "type": "Ext.data.field.Field",
+            "reference": {
+                "name": "fields",
+                "type": "array"
+            },
+            "codeClass": null,
+            "userConfig": {
+                "name": "text"
+            },
+            "name": "MyField1",
+            "designerId": "ff6efb39-1f1b-4c4d-8364-db577fcab70a"
+        }
+    ]
+}

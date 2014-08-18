@@ -19,37 +19,53 @@ Ext.define('dnms.view.MainView', {
 
     requires: [
         'dnms.view.MainViewViewModel',
-        'Ext.panel.Panel'
+        'Ext.panel.Panel',
+        'Ext.form.field.ComboBox'
     ],
 
     viewModel: {
         type: 'mainview'
     },
-    layout: 'border',
+    layout: 'fit',
+    defaultListenerScope: true,
 
     items: [
         {
             xtype: 'container',
-            region: 'center',
-            layout: {
-                type: 'hbox',
-                align: 'stretch'
-            },
+            layout: 'border',
             items: [
                 {
                     xtype: 'panel',
-                    flex: 0.2,
-                    maxWidth: 200,
+                    region: 'west',
+                    split: true,
+                    maxWidth: 400,
+                    minWidth: 150,
                     layout: 'accordion',
                     animCollapse: true,
                     collapseDirection: 'left',
+                    collapsible: true,
                     title: 'Operations',
-                    titleCollapse: false,
                     items: [
                         {
                             xtype: 'panel',
                             layout: 'accordion',
-                            title: 'Objects'
+                            title: 'Objects',
+                            dockedItems: [
+                                {
+                                    xtype: 'combobox',
+                                    dock: 'top',
+                                    fieldLabel: 'Add',
+                                    labelAlign: 'right',
+                                    labelWidth: 50,
+                                    editable: false,
+                                    emptyText: 'Select',
+                                    store: 'objectTypes',
+                                    valueField: 'id',
+                                    listeners: {
+                                        change: 'onComboboxChange'
+                                    }
+                                }
+                            ]
                         },
                         {
                             xtype: 'panel',
@@ -60,11 +76,25 @@ Ext.define('dnms.view.MainView', {
                 },
                 {
                     xtype: 'panel',
-                    flex: 1,
-                    title: 'MAP'
+                    region: 'center',
+                    layout: 'accordion',
+                    items: [
+                        {
+                            xtype: 'panel',
+                            title: 'Network Map'
+                        },
+                        {
+                            xtype: 'panel',
+                            title: 'Others'
+                        }
+                    ]
                 }
             ]
         }
-    ]
+    ],
+
+    onComboboxChange: function(field, newValue, oldValue, eOpts) {
+        field.setValue(''); // Clear the combobox
+    }
 
 });

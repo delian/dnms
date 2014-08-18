@@ -7,6 +7,9 @@
     "codeClass": null,
     "userConfig": {
         "name": "dnms",
+        "stores": [
+            "objectTypes"
+        ],
         "views": [
             "MainView"
         ]
