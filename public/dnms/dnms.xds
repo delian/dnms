@@ -1,0 +1,52 @@
+{
+    "name": "dnms",
+    "settings": {
+        "cmd": {
+            "license": "",
+            "cmdVersion": "",
+            "frameworkVersion": ""
+        },
+        "canvasControls": {
+            "viewportSize": {
+                "name": "Auto Expand",
+                "builtIn": true,
+                "height": null,
+                "width": null
+            }
+        },
+        "urlPrefix": "http://localhost/dnms/",
+        "exportPath": "",
+        "spacesToIndent": 4,
+        "sdkPath": "",
+        "lineEnding": "LF",
+        "genTimestamps": false,
+        "cacheBust": false,
+        "buildShouldOverwriteIndex": true,
+        "generateArchitectVersion": true,
+        "projectHasEnabledWebServer": true,
+        "lockUrlPrefix": true,
+        "installStatus": "Not Installed"
+    },
+    "xdsVersion": "3.1.0",
+    "xdsBuild": 1835,
+    "schemaVersion": 1,
+    "upgradeVersion": 300000000007,
+    "framework": "ext50",
+    "viewOrderMap": {
+        "view": [
+            "faebba6c-f2b0-4682-8f75-7be80bac0784",
+            "8a7677c3-ddc1-411f-b863-391df977c2f9",
+            "5a0bc300-1ebe-4e99-80a5-7daf2cad998f"
+        ],
+        "store": [],
+        "controller": [],
+        "model": [],
+        "resource": [
+            "608e6435-db4f-4c8a-884e-f6726700cf8c",
+            "52da6681-4ab0-4c70-91c4-5e0dc4f8bc9b"
+        ],
+        "app": [
+            "application"
+        ]
+    }
+}

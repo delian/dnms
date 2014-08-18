@@ -1,0 +1,17 @@
+{
+    "type": "Ext.container.Viewport",
+    "reference": {
+        "name": "items",
+        "type": "array"
+    },
+    "codeClass": null,
+    "userConfig": {
+        "designer|initialView": true,
+        "designer|userAlias": "dnms",
+        "designer|userClassName": "MainView"
+    },
+    "name": "MyViewport",
+    "designerId": "faebba6c-f2b0-4682-8f75-7be80bac0784",
+    "viewControllerInstanceId": "5a0bc300-1ebe-4e99-80a5-7daf2cad998f",
+    "viewModelInstanceId": "8a7677c3-ddc1-411f-b863-391df977c2f9"
+}
